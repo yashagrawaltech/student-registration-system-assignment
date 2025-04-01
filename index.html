@@ -1,158 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Student Registration System</title>
-        <link
-            rel="shortcut icon"
-            href="./Tech Profile - 2.png"
-            type="image/x-icon"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-            rel="stylesheet"
-        />
-        <style>
-            * {
-                font-family: "Outfit", sans-serif;
-            }
 
-            /* Hide the spinner for Chrome, Safari, Edge */
-            input[type="number"]::-webkit-inner-spin-button,
-            input[type="number"]::-webkit-outer-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration System</title>
+    <link rel="shortcut icon" href="./Tech Profile - 2.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
 
-            /* Hide the spinner for Firefox */
-            input[type="number"] {
-                -moz-appearance: textfield;
-                /* Firefox */
-            }
+        /* Hide the spinner for Chrome, Safari, Edge */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
 
-            th,
-            td {
-                border: 2px solid white;
-                padding: 8px;
-                text-align: left;
-            }
+        /* Hide the spinner for Firefox */
+        input[type="number"] {
+            -moz-appearance: textfield;
+            /* Firefox */
+        }
 
-            th {
-                background-color: oklch(0.623 0.214 259.815);
-                color: white;
-            }
-        </style>
-        <link rel="stylesheet" href="output.css" />
-    </head>
+        th,
+        td {
+            border: 2px solid white;
+            padding: 8px;
+            text-align: left;
+        }
 
-    <body>
-        <div class="root w-dvw md:h-dvh overflow-hidden flex flex-col text-white">
-            <!-- Header -->
-            <header class="header w-full sticky top-0 left-0 flex flex-col">
-                <h1
-                    class="text-xl font-semibold text-white px-8 py-4 bg-gray-900 text-center"
-                >
-                    Student Registration System
-                </h1>
+        th {
+            background-color: oklch(0.623 0.214 259.815);
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="output.css" />
+</head>
 
-                <!-- Description -->
-                <p class="bg-gray-700 text-center py-2 px-8 text-base text-gray-300">
-                    A web-based application designed to simplify the process of
-                    student data management. It allows users to register
-                    students, store their details, and manage records
-                    efficiently with options to edit and delete entries.
-                </p>
-            </header>
+<body>
+    <div class="root w-dvw md:h-dvh overflow-hidden flex flex-col text-white">
+        <!-- Header -->
+        <header class="header w-full sticky top-0 left-0 flex flex-col">
+            <h1 class="text-xl font-semibold text-white px-8 py-4 bg-gray-900 text-center">
+                Student Registration System
+            </h1>
 
-            <!-- Main -->
-            <main
-                class="w-full h-full grid md:grid-cols-12 bg-gray-800 overflow-hidden"
-            >
-                <!-- Form Section -->
-                <div class="left border-r p-4 md:col-span-4 overflow-hidden">
-                    <div
-                        class="form-container bg-gray-700 md:h-full w-full rounded-2xl shadow-md p-4 md:overflow-y-auto overflow-x-hidden"
-                    >
-                        <form
-                            id="form"
-                            class="w-full flex flex-col gap-4 min-h-full"
-                            action=""
-                        >
-                            <fieldset class="flex flex-col gap-2 items-start">
-                                <label for="name">Student Name</label>
-                                <input
-                                    required
-                                    class="w-full h-12 p-2 border rounded-sm"
-                                    placeholder="Enter Student Name"
-                                    type="text"
-                                    name="name"
-                                    pattern="[A-Za-z\s]+"
-                                    id="name"
-                                />
-                            </fieldset>
-                            <fieldset class="flex flex-col gap-2 items-start">
-                                <label for="id">Student ID</label>
-                                <input
-                                    required
-                                    class="w-full h-12 p-2 border rounded-sm"
-                                    placeholder="Enter Student ID"
-                                    type="number"
-                                    name="id"
-                                    id="id"
-                                />
-                            </fieldset>
-                            <fieldset class="flex flex-col gap-2 items-start">
-                                <label for="email">Email ID</label>
-                                <input
-                                    required
-                                    class="w-full h-12 p-2 border rounded-sm"
-                                    placeholder="example@email.com"
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                />
-                            </fieldset>
-                            <fieldset class="flex flex-col gap-2 items-start">
-                                <label for="number">Contact Number</label>
-                                <input
-                                    required
-                                    class="w-full h-12 p-2 border rounded-sm"
-                                    placeholder="1234567890"
-                                    type=""
-                                    name="number"
-                                    id="number"
-                                    pattern="[0-9]{10}"
-                                />
-                                <p class="text-sm text-gray-400">
-                                    contact number can contain only 10 digits.
-                                </p>
-                            </fieldset>
-                            <button class="btn-primary mt-8">
-                                Add Student
-                            </button>
-                        </form>
-                    </div>
+            <!-- Description -->
+            <p class="bg-gray-700 text-center py-2 px-8 text-base text-gray-300">
+                A web-based application designed to simplify the process of
+                student data management. It allows users to register
+                students, store their details, and manage records
+                efficiently with options to edit and delete entries.
+            </p>
+        </header>
+
+        <!-- Main -->
+        <main class="w-full h-full grid md:grid-cols-12 bg-gray-800 overflow-hidden">
+            <!-- Form Section -->
+            <div class="left border-r p-4 md:col-span-4 overflow-hidden">
+                <div
+                    class="form-container bg-gray-700 md:h-full w-full rounded-2xl shadow-md p-4 md:overflow-y-auto overflow-x-hidden">
+                    <form id="form" class="w-full flex flex-col gap-4 min-h-full" action="">
+                        <fieldset class="flex flex-col gap-2 items-start">
+                            <label for="name">Student Name</label>
+                            <input required class="w-full h-12 p-2 border rounded-sm" placeholder="Enter Student Name"
+                                type="text" name="name" pattern="[A-Za-z\s]+" id="name" />
+                        </fieldset>
+                        <fieldset class="flex flex-col gap-2 items-start">
+                            <label for="id">Student ID</label>
+                            <input required class="w-full h-12 p-2 border rounded-sm" placeholder="Enter Student ID"
+                                type="number" name="id" id="id" />
+                        </fieldset>
+                        <fieldset class="flex flex-col gap-2 items-start">
+                            <label for="email">Email ID</label>
+                            <input required class="w-full h-12 p-2 border rounded-sm" placeholder="example@email.com"
+                                type="email" name="email" id="email" />
+                        </fieldset>
+                        <fieldset class="flex flex-col gap-2 items-start">
+                            <label for="number">Contact Number</label>
+                            <input required class="w-full h-12 p-2 border rounded-sm" placeholder="1234567890" type=""
+                                name="number" id="number" pattern="[0-9]{10}" />
+                            <p class="text-sm text-gray-400">
+                                contact number can contain only 10 digits.
+                            </p>
+                        </fieldset>
+                        <button class="btn-primary mt-8">
+                            Add Student
+                        </button>
+                    </form>
                 </div>
+            </div>
 
-                <!-- Table Section -->
-                <div class="right md:col-span-8 overflow-hidden">
-                    <div
-                        class="table-container w-full h-full p-4 overflow-y-auto"
-                    >
-                        <table id="table" class="w-full border-collapse">
-                            <thead class="w-full">
-                                <tr class="w-full">
-                                    <th>Name</th>
-                                    <th>ID</th>
-                                    <th>Email</th>
-                                    <th>Contact</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table-body">
-                                <!-- <tr>
+            <!-- Table Section -->
+            <div class="right md:col-span-8 overflow-hidden">
+                <div class="table-container w-full h-full p-4 overflow-y-auto">
+                    <table id="table" class="w-full border-collapse">
+                        <thead class="w-full">
+                            <tr class="w-full">
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- <tr>
                                 <td>Yash Agrawal</td>
                                 <td>2305101270390</td>
                                 <td>yashagrawal4104@gmail.com</td>
@@ -164,92 +121,52 @@
                                     <button data-index="1" class="delete-btn">🗑️</button>
                                 </td>
                             </tr> -->
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
-            </main>
-
-            <!-- Form Overlay To Edit Fields -->
-            <div
-                id="edit-form-container"
-                class="fixed h-dvh w-dvw bg-gray-600/80 p-2 md:p-12 hidden"
-            >
-                <span
-                    id="edit-form-close-btn"
-                    class="w-8 h-8 inline-block absolute top-4 right-4"
-                >
-                    <svg
-                        class="w-full h-full"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                    >
-                        <path
-                            d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
-                        ></path>
-                    </svg>
-                </span>
-                <form
-                    id="edit-form"
-                    class="w-full flex flex-col gap-4 min-h-full bg-gray-900 p-4 rounded-2xl"
-                    action=""
-                >
-                    <fieldset class="flex flex-col gap-2 items-start">
-                        <label for="name">Student Name</label>
-                        <input
-                            required
-                            class="w-full h-12 p-2 border rounded-sm"
-                            placeholder="Enter Student Name"
-                            type="text"
-                            name="name"
-                            pattern="[A-Za-z\s]+"
-                            id="name"
-                        />
-                    </fieldset>
-                    <fieldset class="flex flex-col gap-2 items-start">
-                        <label for="id">Student ID</label>
-                        <input
-                            required
-                            class="w-full h-12 p-2 border rounded-sm"
-                            placeholder="Enter Student ID"
-                            type="number"
-                            name="id"
-                            id="id"
-                        />
-                    </fieldset>
-                    <fieldset class="flex flex-col gap-2 items-start">
-                        <label for="email">Email ID</label>
-                        <input
-                            required
-                            class="w-full h-12 p-2 border rounded-sm"
-                            placeholder="example@email.com"
-                            type="email"
-                            name="email"
-                            id="email"
-                        />
-                    </fieldset>
-                    <fieldset class="flex flex-col gap-2 items-start">
-                        <label for="number">Contact Number</label>
-                        <input
-                            required
-                            class="w-full h-12 p-2 border rounded-sm"
-                            placeholder="1234567890"
-                            type=""
-                            name="number"
-                            id="number"
-                            pattern="[0-9]{10}"
-                        />
-                        <p class="text-sm text-gray-400">
-                            contact number can contain only 10 digits.
-                        </p>
-                    </fieldset>
-                    <button class="btn-primary mt-8">Add Student</button>
-                </form>
             </div>
-        </div>
+        </main>
 
-        <!-- script -->
-        <script src="./script.js"></script>
-    </body>
+        <!-- Form Overlay To Edit Fields -->
+        <div id="edit-form-container" class="fixed h-dvh w-dvw bg-gray-600/80 p-2 md:p-12 hidden">
+            <span id="edit-form-close-btn" class="w-8 h-8 inline-block absolute top-4 right-4">
+                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z">
+                    </path>
+                </svg>
+            </span>
+            <form id="edit-form" class="w-full flex flex-col gap-4 min-h-full bg-gray-900 p-4 rounded-2xl" action="">
+                <fieldset class="flex flex-col gap-2 items-start">
+                    <label for="name">Student Name</label>
+                    <input required class="w-full h-12 p-2 border rounded-sm" placeholder="Enter Student Name"
+                        type="text" name="name" pattern="[A-Za-z\s]+" id="name" />
+                </fieldset>
+                <fieldset class="flex flex-col gap-2 items-start">
+                    <label for="id">Student ID</label>
+                    <input required class="w-full h-12 p-2 border rounded-sm" placeholder="Enter Student ID"
+                        type="number" name="id" id="id" />
+                </fieldset>
+                <fieldset class="flex flex-col gap-2 items-start">
+                    <label for="email">Email ID</label>
+                    <input required class="w-full h-12 p-2 border rounded-sm" placeholder="example@email.com"
+                        type="email" name="email" id="email" />
+                </fieldset>
+                <fieldset class="flex flex-col gap-2 items-start">
+                    <label for="number">Contact Number</label>
+                    <input required class="w-full h-12 p-2 border rounded-sm" placeholder="1234567890" type=""
+                        name="number" id="number" pattern="[0-9]{10}" />
+                    <p class="text-sm text-gray-400">
+                        contact number can contain only 10 digits.
+                    </p>
+                </fieldset>
+                <button class="btn-primary mt-8">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="./script.js"></script>
+</body>
+
 </html>

@@ -1,5 +1,8 @@
 # Assignment: Student Registration System
 
+- GitHub: https://github.com/yashagrawaltech/student-registration-system-assignment
+- Live: https://student-reg-sys-assignment.netlify.app/
+
 ## Objective
 Develop a student registration system where students can register their details such as **name, class, address, and contact number**. Additionally, the system should provide functionalities for **editing and deleting records**.
 
@@ -49,10 +52,10 @@ Develop a student registration system where students can register their details 
 - Add a **vertical scrollbar dynamically**. ✅
 
 ### Task 7: Documentation and Comments (5 Marks)
-- Ensure an **organized file structure**.
-- Focus on **creativity and presentation**.
+- Ensure an **organized file structure**. ✅
+- Focus on **creativity and presentation**. ✅
 - Include **comments in the code** to explain complex logic.
-- **Upload your project to GitHub** and provide the **GitHub link**.
+- **Upload your project to GitHub** and provide the **GitHub link**. ✅
   - *Failure to do so will result in marks being deducted*.
 
 ## Assessment
